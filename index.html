@@ -3,883 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Multifunction Car Anti-Slip Mat Premium - Solusi Elegan untuk Dashboard Mobil Anda. Anti slip, multifungsi, desain mewah.">
-    <title>Premium Car Anti-Slip Mat | Dashboard Mewah & Rapi</title>
+    <title>Mat Premium Anti-Slip Mobil | Aksesoris Mobil Mewah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                        'dark-blue': '#0f1a2d',
+                        cream: '#f8f5f0'
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --primary-gold: #d4af37; /* Luxury Gold */
-            --dark-gold: #b8941f; /* Darker Gold for accents */
-            --luxury-black: #1a1a1a; /* Deep Black for sophistication */
-            --soft-gray: #f0f0f0; /* Light Gray for backgrounds */
-            --text-dark: #2c2c2c; /* Dark Gray for text */
-            --text-light: #555; /* Lighter Gray for secondary text */
-            --red-urgent: #e74c3c; /* Urgent Red for promotions */
-            --white-pure: #ffffff;
-            --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
-            --shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.12);
-            --shadow-gold: 0 6px 20px rgba(212, 175, 55, 0.25);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background-color: var(--soft-gray);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container-wrapper { /* Added wrapper for potential full-width elements */
-            max-width: 500px; /* Optimal for mobile-first product pages */
-            margin: 0 auto;
-            background-color: var(--white-pure);
-            min-height: 100vh;
-            position: relative;
-            box-shadow: 0 0 40px rgba(0,0,0,0.1);
-        }
-
-        /* --- Loading Spinner --- */
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--luxury-black);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10000;
-            opacity: 1;
-            transition: opacity 0.5s ease-out;
-        }
-        .loading-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid rgba(212, 175, 55, 0.3);
-            border-top-color: var(--primary-gold);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* --- Scroll Progress Bar --- */
-        .scroll-progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 4px;
-            background-color: var(--primary-gold);
-            width: 0%;
-            z-index: 9999;
-            transition: width 0.1s ease-out;
-        }
-        
-        /* --- Hero Section --- */
-        .hero-section {
-            background: linear-gradient(145deg, var(--luxury-black) 0%, #2a2a2a 100%);
-            color: var(--white-pure);
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-section::before { /* Subtle pattern for texture */
-            content: "";
-            position: absolute;
-            top:0; left:0; right:0; bottom:0;
-            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20 20 L80 80 M20 80 L80 20" stroke-width="1" stroke="%23d4af37" opacity="0.05"/%3E%3C/svg%3E');
-            z-index: 0;
-        }
-        .hero-content {
-            position: relative; z-index: 1;
-        }
-        .hero-image {
-            width: 100%;
-            max-width: 320px; /* Increased for GIF visibility */
-            height: auto;
-            border-radius: 12px;
-            margin: 15px auto 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            border: 3px solid var(--primary-gold);
-            animation: floatAnimation 3.5s ease-in-out infinite;
-        }
-        @keyframes floatAnimation {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-12px); }
-        }
-        .hero-title {
-            font-size: 2rem; /* Increased for impact */
-            font-weight: 800;
-            margin-bottom: 10px;
-            line-height: 1.2;
-            color: var(--primary-gold);
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-        .hero-subtitle {
-            font-size: 1.1rem;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-
-        /* --- Marquee Testimonials --- */
-        .marquee-banner {
-            background-color: var(--primary-gold);
-            color: var(--luxury-black);
-            padding: 12px 0;
-            overflow: hidden;
+        .marquee {
+            animation: marquee 30s linear infinite;
+            display: inline-block;
             white-space: nowrap;
         }
-        .marquee-content {
-            display: inline-block;
-            animation: marqueeAnimation 25s linear infinite;
-            font-weight: 600;
-            font-size: 0.9rem;
+        
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            5% { transform: translateX(100%); } /* pause at start */
+            95% { transform: translateX(-100%); }
+            100% { transform: translateX(-100%); } /* pause at end */
         }
-        .marquee-content span { margin: 0 25px; }
-        @keyframes marqueeAnimation {
-            0% { transform: translateX(0%); } /* Start from edge for continuous loop */
-            100% { transform: translateX(-50%); } /* Scroll one full set of items */
+        
+        .product-shadow {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
-
-        /* --- Price & Offer Section --- */
-        .price-offer-section {
-            padding: 25px 20px;
-            text-align: center;
-            background-color: var(--white-pure);
+        
+        .countdown-box {
+            animation: pulse 2s infinite;
         }
-        .price-original {
-            font-size: 1rem;
-            color: var(--text-light);
-            text-decoration: line-through;
-            margin-right: 10px;
-        }
-        .price-sale {
-            font-size: 2.2rem;
-            color: var(--red-urgent);
-            font-weight: 800;
-        }
-        .price-discount-badge {
-            display: inline-block;
-            background-color: var(--red-urgent);
-            color: var(--white-pure);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        .offer-details {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            margin-top: 10px;
-        }
-
-        /* --- Section Styling --- */
-        .content-section {
-            padding: 30px 20px;
-            background-color: var(--white-pure);
-            border-bottom: 1px solid #e9e9e9;
-        }
-        .content-section:last-of-type { border-bottom: none; }
-        .section-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--luxury-black);
-            text-align: center;
-            margin-bottom: 25px;
-            position: relative;
-        }
-        .section-title::after { /* Gold underline accent */
-            content: '';
-            display: block;
-            width: 70px;
-            height: 3px;
-            background-color: var(--primary-gold);
-            margin: 8px auto 0;
-            border-radius: 2px;
-        }
-
-        /* --- Benefits Section --- */
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for mobile */
-            gap: 20px;
-        }
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            padding: 15px;
-            background-color: var(--soft-gray);
-            border-radius: 10px;
-            border-left: 5px solid var(--primary-gold);
-            box-shadow: var(--shadow-subtle);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .benefit-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-strong);
-        }
-        .benefit-icon {
-            font-size: 1.8rem; /* Larger icons */
-            color: var(--primary-gold);
-            margin-right: 15px;
-            margin-top: 3px;
-            min-width: 30px; /* Ensure alignment */
-            text-align: center;
-        }
-        .benefit-text h4 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        .benefit-text p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* --- Product Gallery --- */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-        .gallery-image-wrapper {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow-subtle);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer; /* Indicates interactivity */
-        }
-        .gallery-image-wrapper:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-strong);
-        }
-        .gallery-image-wrapper img {
-            width: 100%;
-            height: 150px; /* Uniform height */
-            object-fit: cover; /* Crop to fit */
-            display: block;
-        }
-
-        /* --- Testimonials Section --- */
-        .testimonial-card {
-            background-color: #fdfdfd; /* Slightly off-white */
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-subtle);
-            border-top: 4px solid var(--primary-gold);
-            position: relative;
-        }
-        .testimonial-card::before { /* Quote icon */
-            content: '“';
-            font-family: Georgia, serif;
-            font-size: 4rem;
-            color: var(--primary-gold);
-            opacity: 0.2;
-            position: absolute;
-            top: 5px;
-            left: 15px;
-            line-height: 1;
-        }
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            position: relative; z-index: 1;
-        }
-        .testimonial-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background-color: var(--primary-gold);
-            color: var(--luxury-black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-right: 12px;
-        }
-        .testimonial-name {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-        .testimonial-location {
-            font-size: 0.8rem;
-            color: var(--text-light);
-        }
-        .testimonial-rating {
-            margin-left: auto;
-            color: #ffc107; /* Standard star yellow */
-            font-size: 0.9rem;
-        }
-        .testimonial-text {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-style: italic;
-            position: relative; z-index: 1;
-        }
-
-        /* --- Urgency & Countdown Section --- */
-        .urgency-section {
-            background: linear-gradient(135deg, var(--red-urgent), #c0392b);
-            color: var(--white-pure);
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .urgency-section::before { /* Animated diagonal lines */
-            content: "";
-            position: absolute;
-            width: 200%; height: 200%;
-            top: -50%; left: -50%;
-            background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);
-            animation: animatedBackground 20s linear infinite;
-            z-index: 0;
-        }
-        @keyframes animatedBackground {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        .urgency-content {
-            position: relative; z-index: 1;
-        }
-        .urgency-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 10px; /* Reduced gap */
-            margin: 20px 0;
-        }
-        .countdown-item {
-            background-color: rgba(255,255,255,0.15);
-            padding: 10px 12px; /* Adjusted padding */
-            border-radius: 8px;
-            min-width: 65px; /* Slightly wider */
-        }
-        .countdown-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            display: block;
-        }
-        .countdown-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-        .stock-info {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        .stock-info strong {
-            animation: pulseStock 1.5s infinite ease-in-out;
-        }
-        @keyframes pulseStock {
-            0%, 100% { transform: scale(1); color: var(--white-pure); }
-            50% { transform: scale(1.1); color: #fff3cd; } /* Light yellow pulse */
-        }
-
-        /* --- CTA Section --- */
-        .cta-main-button {
-            display: block;
-            width: calc(100% - 40px); /* Full width with padding */
-            margin: 30px auto;
-            padding: 18px 20px;
-            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
-            color: var(--luxury-black);
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50px; /* Pill shape */
-            border: none;
-            cursor: pointer;
-            box-shadow: var(--shadow-gold);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            animation: pulseButton 2s infinite;
-        }
-        .cta-main-button:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
-            animation-play-state: paused;
-        }
-        @keyframes pulseButton {
+        
+        @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        .trust-badges {
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-top: -10px;
-            margin-bottom: 20px;
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
         }
-        .trust-badges span { margin: 0 8px; }
-
-        /* --- Footer / Extra Space --- */
-        .footer-space { height: 100px; } /* Space for sticky banner */
-
-        /* --- Sticky Bottom Banner --- */
-        .sticky-bottom-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            max-width: 500px; /* Match container wrapper */
-            margin: 0 auto;
-            background-color: var(--luxury-black);
-            color: var(--white-pure);
-            padding: 12px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-            border-top: 3px solid var(--primary-gold);
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-        .sticky-price-info .original-price {
-            font-size: 0.8rem;
-            text-decoration: line-through;
-            opacity: 0.7;
-            display: block;
+        
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
-        .sticky-price-info .sale-price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary-gold);
+        
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+            display: inline-block;
         }
-        .sticky-cta-button {
-            padding: 10px 20px;
-            background-color: var(--primary-gold);
-            color: var(--luxury-black);
-            font-size: 0.95rem;
-            font-weight: 700;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .sticky-cta-button:hover {
-            background-color: var(--dark-gold);
-            transform: scale(1.05);
-        }
-
-        /* --- Animations for elements on scroll --- */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* --- WhatsApp Floating Button --- */
-        .whatsapp-fab {
-            position: fixed;
-            width: 55px;
-            height: 55px;
-            bottom: 90px; /* Above sticky banner */
-            right: 20px;
-            background-color: #25D366;
-            color: var(--white-pure);
-            border-radius: 50%;
-            text-align: center;
-            font-size: 28px; /* Icon size */
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            z-index: 999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            animation: fabBounce 2.5s infinite ease-in-out;
-        }
-        @keyframes fabBounce {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-8px) scale(1.05); }
-        }
-
-        /* Modal for Image Gallery */
-        .image-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.85);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content-image {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 8px;
-        }
-        .close-modal {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-        .close-modal:hover, .close-modal:focus {
-            color: #bbb;
-            text-decoration: none;
-        }
-
-        @media (max-width: 360px) { /* Extra small devices */
-            .hero-title { font-size: 1.7rem; }
-            .hero-subtitle { font-size: 0.95rem; }
-            .price-sale { font-size: 1.9rem; }
-            .countdown-item { min-width: 55px; padding: 8px 10px; }
-            .countdown-number { font-size: 1.5rem; }
-            .sticky-price-info .sale-price { font-size: 1rem; }
-            .sticky-cta-button { padding: 8px 15px; font-size: 0.85rem; }
-        }
-
     </style>
 </head>
-<body>
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="spinner"></div>
-    </div>
-
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
-
-    <div class="container-wrapper">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-content">
-                <img src="https://cdn.cloudfastcdn.com/image/0d960cd0ab1dd6ae5f4e52609a014fb0fa88ff5a.gif" alt="Multifunction Car Anti-Slip Mat Premium Animation" class="hero-image animate-on-scroll">
-                <h1 class="hero-title animate-on-scroll">Solusi Dashboard Mobil MEWAH & RAPI</h1>
-                <p class="hero-subtitle animate-on-scroll">Multifunction Car Anti-Slip Mat Premium - Berkendara Tanpa Cemas Barang Berantakan!</p>
+<body class="bg-cream font-body text-dark-blue">
+    <!-- Sticky Banner -->
+    <div class="fixed bottom-0 left-0 right-0 bg-dark-blue text-white z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between">
+            <div class="flex items-center mb-2 md:mb-0">
+                <div class="bg-white rounded-md p-1 mr-3">
+                    <img src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png" alt="Mat Anti-Slip" class="w-12 h-12 object-contain">
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg">Mat Premium Anti-Slip Mobil</h3>
+                    <div class="flex items-center">
+                        <span class="text-gold font-bold text-xl mr-2">Rp166.000</span>
+                        <span class="line-through text-gray-400">Rp249.000</span>
+                    </div>
+                </div>
             </div>
-        </section>
-
-        <!-- Marquee Testimonials -->
-        <div class="marquee-banner">
-            <div class="marquee-content" id="marqueeContent">
-                <!-- Content injected by JS for seamless loop -->
+            <div class="flex items-center">
+                <div class="mr-4 text-center hidden md:block">
+                    <div class="text-xs">Harga Promo Berakhir Dalam:</div>
+                    <div id="countdown-timer" class="font-bold">00:15:00</div>
+                </div>
+                <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" target="_blank" class="bg-gold hover:bg-yellow-600 text-dark-blue font-bold py-3 px-6 rounded-md transition duration-300 transform hover:scale-105">
+                    BELI SEKARANG <i class="ml-2 fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
+    </div>
 
-        <!-- Price & Offer Section -->
-        <section class="price-offer-section animate-on-scroll">
-            <div>
-                <span class="price-original">Rp 249.000</span>
-                <strong class="price-sale">Rp 166.000</strong>
-                <span class="price-discount-badge">HEMAT 33%!</span>
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-16 md:py-24 bg-gradient-to-br from-dark-blue via-gray-900 to-dark-blue">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-3xl md:text-5xl font-display font-bold text-white mb-4">
+                    <span class="text-gold">Mat Premium</span> Anti-Slip Mobil
+                </h1>
+                <p class="text-xl text-gray-300 mb-6">
+                    Solusi Mewah untuk Dashboard Mobil Anda - Tahan Lama & Multifungsi
+                </p>
+                
+                <div class="bg-black bg-opacity-30 rounded-lg p-3 mb-6 overflow-hidden">
+                    <div class="marquee text-gold text-sm font-medium">
+                        <span class="mx-6">✧✧✧✧✧ "Barang premium - dashboard mobil saya kini mewah!" - Budi (Jakarta)</span>
+                        <span class="mx-6">✧✧✧✧✧ "Kualitas eksklusif, layaknya produk impor mahal" - Siti (Bandung)</span>
+                        <span class="mx-6">✧✧✧✧✧ "Favorit para pemilik mobil mewah" - Ahmad (Surabaya)</span>
+                        <span class="mx-6">✧✧✧✧✧ "Anti-slip sempurna untuk mobil luxury" - Dewi (Medan)</span>
+                        <span class="mx-6">✧✧✧✧✧ "Hadiah sempurna untuk pecinta otomotif" - Rudi (Bali)</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" target="_blank" class="bg-gold hover:bg-yellow-600 text-dark-blue font-bold py-3 px-8 rounded-md transition duration-300 transform hover:scale-105">
+                        PESAN SEKARANG <i class="ml-2 fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="#testimonials" class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white font-bold py-3 px-8 rounded-md transition duration-300">
+                        LIHAT TESTIMONI <i class="ml-2 fas fa-chevron-down"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex items-center text-sm text-gray-300">
+                    <div class="flex items-center mr-6">
+                        <div class="w-10 h-10 rounded-full bg-gold bg-opacity-20 flex items-center justify-center mr-2">
+                            <i class="fas fa-truck text-gold"></i>
+                        </div>
+                        <span>Gratis Ongkir</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gold bg-opacity-20 flex items-center justify-center mr-2">
+                            <i class="fas fa-shield-alt text-gold"></i>
+                        </div>
+                        <span>Garansi 1 Tahun</span>
+                    </div>
+                </div>
             </div>
-            <p class="offer-details">Penawaran Spesial Terbatas! Jangan Sampai Ketinggalan!</p>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="content-section">
-            <h2 class="section-title animate-on-scroll">✨ Keunggulan Produk Kami ✨</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">🔒</div>
-                    <div class="benefit-text">
-                        <h4>Anti-Slip Super Kuat</h4>
-                        <p>Dashboard aman! HP, koin, dan barang lain tidak akan jatuh atau bergeser meski di jalan bergelombang.</p>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="product-shadow rounded-2xl overflow-hidden">
+                        <img src="https://cdn.cloudfastcdn.com/image/0d960cd0ab1dd6ae5f4e52609a014fb0fa88ff5a.gif" alt="Mat Anti-Slip Mobil" class="w-full max-w-lg">
                     </div>
-                </div>
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">📱</div>
-                    <div class="benefit-text">
-                        <h4>Multifungsi 3-in-1</h4>
-                        <p>Holder HP praktis, tempat penyimpanan koin, dan alas serbaguna untuk dashboard mobil Anda.</p>
-                    </div>
-                </div>
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">💎</div>
-                    <div class="benefit-text">
-                        <h4>Desain Mewah & Elegan</h4>
-                        <p>Tingkatkan tampilan interior mobil Anda dengan sentuhan premium yang menawan.</p>
-                    </div>
-                </div>
-                <div class="benefit-item animate-on-scroll">
-                    <div class="benefit-icon">🧼</div>
-                    <div class="benefit-text">
-                        <h4>Tahan Lama & Mudah Dibersihkan</h4>
-                        <p>Terbuat dari material berkualitas tinggi, awet, dan sangat mudah untuk dibersihkan kembali.</p>
+                    <div class="absolute -bottom-4 -left-4 bg-gold text-dark-blue font-bold py-1 px-4 rounded-full">
+                        <i class="fas fa-star mr-2"></i> BESTSELLER
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Product Gallery Section -->
-        <section class="content-section">
-            <h2 class="section-title animate-on-scroll">📸 Galeri Produk Eksklusif</h2>
-            <div class="gallery-grid">
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png"><img src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png" alt="Car Mat Detail 1"></div>
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png"><img src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png" alt="Car Mat Detail 2"></div>
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png"><img src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png" alt="Car Mat Detail 3"></div>
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png"><img src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png" alt="Car Mat Detail 4"></div>
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/57f1a54c28d912cd1f8084a2ebd4d1602cb2bd68-600.png"><img src="https://cdn.cloudfastcdn.com/image/57f1a54c28d912cd1f8084a2ebd4d1602cb2bd68-600.png" alt="Car Mat Detail 5"></div>
-                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/f180383b8db5f6c5f1a9688346f29937b49a418d-600.png"><img src="https://cdn.cloudfastcdn.com/image/f180383b8db5f6c5f1a9688346f29937b49a418d-600.png" alt="Car Mat Detail 6"></div>
-            </div>
-        </section>
+        </div>
         
-        <!-- Modal for Image Viewing -->
-        <div id="imageModal" class="image-modal">
-            <span class="close-modal" id="closeModal">&times;</span>
-            <img class="modal-content-image" id="modalImage">
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-dark-blue to-transparent"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-gradient-to-br from-gray-100 to-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                    <span class="text-gold">Galeri</span> Produk Premium
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Lihat bagaimana mat premium kami meningkatkan interior mobil Anda
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png" alt="Mat in car" class="w-full h-56 object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png" alt="Mat features" class="w-full h-56 object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png" alt="Mat premium" class="w-full h-56 object-cover">
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://cdn.cloudfastcdn.com/image/57f1a54c28d912cd1f8084a2ebd4d1602cb2bd68-600.png" alt="Mat close up" class="w-full h-56 object-cover">
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Testimonials Section -->
-        <section class="content-section">
-            <h2 class="section-title animate-on-scroll">💬 Apa Kata Pelanggan Kami?</h2>
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">AS</div>
-                    <div>
-                        <div class="testimonial-name">Ahmad S.</div>
-                        <div class="testimonial-location">Jakarta Pusat</div>
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+                    Pertanyaan <span class="text-gold">Umum</span>
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Informasi penting yang perlu Anda ketahui
+                </p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="border border-gray-200 rounded-xl overflow-hidden mb-4">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-5 font-bold flex justify-between items-center">
+                            <span>Apakah produk ini cocok untuk semua jenis mobil?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer p-5 bg-gray-50 border-t border-gray-200 hidden">
+                            <p class="text-gray-600">Ya, mat premium kami didesain universal untuk semua jenis mobil termasuk sedan, SUV, MPV, hatchback, dan bahkan mobil sport. Ukurannya yang pas dan material yang fleksibel memastikan cocok di berbagai permukaan dashboard.</p>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="testimonial-text">"Mantap jiwa! Dashboard jadi kinclong dan barang-barang gak geser lagi. HP aman pas lagi ngecas sambil nyetir. Recommended!"</p>
-            </div>
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">DW</div>
-                    <div>
-                        <div class="testimonial-name">Dewi W.</div>
-                        <div class="testimonial-location">Surabaya</div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden mb-4">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-5 font-bold flex justify-between items-center">
+                            <span>Bagaimana cara perawatannya?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer p-5 bg-gray-50 border-t border-gray-200 hidden">
+                            <p class="text-gray-600">Perawatan sangat mudah - cukup lap dengan kain lembab atau tissue basah. Materialnya tahan air dan tidak menyerap noda. Hindari bahan kimia keras yang dapat merusak permukaan.</p>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="testimonial-text">"Suka banget sama desainnya, keliatan mewah. Kualitasnya juga oke punya, gak nyesel beli. Multifungsi banget buat emak-emak kayak saya."</p>
-            </div>
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">BP</div>
-                    <div>
-                        <div class="testimonial-name">Budi P.</div>
-                        <div class="testimonial-location">Bandung</div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden mb-4">
+                    <div class="faq-item">
+                        <button class="w-full text-left p-5 font-bold flex justify-between items-center">
+                            <span>Berapa lama pengiriman ke daerah saya?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer p-5 bg-gray-50 border-t border-gray-200 hidden">
+                            <p class="text-gray-600">Kami melakukan pengiriman dari Jakarta. Estimasi pengiriman: Jabodetabek 1-2 hari, Jawa 2-3 hari, Sumatera dan Bali 3-4 hari, luar Jawa 4-7 hari. Gratis ongkos kirim untuk seluruh Indonesia.</p>
+                        </div>
                     </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <p class="testimonial-text">"Awalnya ragu, tapi pas dateng barangnya oke banget. Anti slipnya beneran fungsi, koin dan kunci gak berisik lagi. Harganya juga pas di kantong."</p>
             </div>
-             <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">RS</div>
-                    <div>
-                        <div class="testimonial-name">Rina S.</div>
-                        <div class="testimonial-location">Medan</div>
-                    </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">"Praktis dan elegan! Cocok buat mobil saya yang sering bawa banyak barang kecil. Pengiriman cepat, seller ramah. Thank you!"</p>
-            </div>
-            <div class="testimonial-card animate-on-scroll">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">EK</div>
-                    <div>
-                        <div class="testimonial-name">Eko K.</div>
-                        <div class="testimonial-location">Semarang</div>
-                    </div>
-                    <div class="testimonial-rating">⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">"Kualitas bagus, sesuai deskripsi. Agak sedikit bau karet pas baru dibuka, tapi hilang setelah diangin-anginkan. Overall puas."</p>
-            </div>
-        </section>
-
-        <!-- Urgency & Countdown Section -->
-        <section class="urgency-section">
-            <div class="urgency-content animate-on-scroll">
-                <h3 class="urgency-title">🔥 PENAWARAN SPESIAL HARI INI! 🔥</h3>
-                <p>Diskon Berakhir Dalam:</p>
-                <div class="countdown-timer" id="countdownTimer">
-                    <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Jam</span></div>
-                    <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Menit</span></div>
-                    <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span class="countdown-label">Detik</span></div>
-                </div>
-                <p class="stock-info">Hanya Tersisa <strong id="stockCount">23</strong> Unit Lagi!</p>
-            </div>
-        </section>
-
-        <!-- Main CTA Button -->
-        <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" class="cta-main-button animate-on-scroll" target="_self">
-            🛒 PESAN SEKARANG & AMANKAN DISKON!
-        </a>
-        <div class="trust-badges animate-on-scroll">
-            <span>✅ 100% Original</span>
-            <span>🚚 Gratis Ongkir*</span>
-            <span>🛡️ Transaksi Aman</span>
         </div>
+    </section>
 
-        <div class="footer-space"></div> <!-- For sticky banner -->
-    </div>
-
-    <!-- Sticky Bottom Banner -->
-    <div class="sticky-bottom-banner">
-        <div class="sticky-price-info">
-            <span class="original-price">Rp 249.000</span>
-            <span class="sale-price">Rp 166.000</span>
+    <!-- Final CTA -->
+    <section class="py-16 bg-gradient-to-br from-dark-blue to-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+                    Tingkatkan <span class="text-gold">Kenyamanan & Gaya</span> Berkendara Anda
+                </h2>
+                <p class="text-xl mb-8">
+                    Jangan lewatkan penawaran spesial untuk pelanggan baru!
+                </p>
+                
+                <div class="bg-gray-800 rounded-xl p-6 mb-8">
+                    <div class="flex flex-wrap justify-center items-center">
+                        <div class="text-3xl font-bold text-gold mr-4">Rp166.000</div>
+                        <div class="text-xl line-through text-gray-400 mr-4">Rp249.000</div>
+                        <div class="bg-red-600 text-white text-sm font-bold py-1 px-3 rounded-full">
+                            <i class="fas fa-percentage mr-1"></i> Diskon 33%
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" target="_blank" class="inline-block bg-gold hover:bg-yellow-600 text-dark-blue font-bold py-4 px-12 rounded-lg text-lg transition duration-300 transform hover:scale-105 mb-6">
+                    <i class="fas fa-shopping-cart mr-2"></i> PESAN SEKARANG
+                </a>
+                
+                <div class="text-sm text-gray-400 mt-8">
+                    <p class="mb-2"><i class="fas fa-check-circle text-gold mr-2"></i> Garansi 1 tahun untuk kerusakan material</p>
+                    <p><i class="fas fa-check-circle text-gold mr-2"></i> Gratis pengembalian jika tidak sesuai ekspektasi</p>
+                </div>
+            </div>
         </div>
-        <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" class="sticky-cta-button" target="_self">BELI SEKARANG</a>
-    </div>
+    </section>
 
-    <!-- WhatsApp Floating Action Button -->
-    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Multifunction%20Car%20Anti-Slip%20Mat%20Premium." class="whatsapp-fab" target="_blank" aria-label="Chat di WhatsApp">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="24" height="24"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 .3c30.9 0 61.4 11.9 84.1 33.6 22.7 21.7 35.6 50.3 35.6 81.3 0 83.1-68.5 151.1-151.8 151.1-27.9 0-54.9-7.8-77.8-22.3L128 416l-9.2-56.5c-14.8-22.8-23.9-48.7-23.9-76.1 0-83.1 68.5-151.1 151.8-151.1zM223.9 177.2c-11.4 0-20.6 9.2-20.6 20.6 0 11.4 9.2 20.6 20.6 20.6 11.4 0 20.6-9.2 20.6-20.6 0-11.4-9.2-20.6-20.6-20.6zm69.7 79.2c-3.3-1.6-19.8-9.7-22.8-10.8-3.1-1.1-5.3-1.6-7.6 1.6-2.2 3.3-8.6 10.8-10.6 13s-3.9 2.3-7.2 0.8c-3.3-1.6-14.1-5.2-26.8-16.6-9.9-8.9-16.6-19.8-18.6-23.1-2-3.3 0.4-5.1 1.6-6.6 1.1-1.6 2.5-3.9 3.8-5.9 1.3-2 1.6-3.3 2.5-5.6.8-2.3 0.4-4.2-0.4-5.9-0.8-1.6-7.6-18.1-10.3-24.8-2.8-6.6-5.6-5.7-7.6-5.7s-4.2 0-6.3 0c-2.2 0-5.6 0.8-8.6 3.9s-11.4 11.1-11.4 27c0 15.9 11.6 31.3 13.3 33.6 1.6 2.3 22.8 34.9 55.4 48.6 32.4 13.7 32.4 9.2 38.1 8.4 5.7-0.8 19.8-8.1 22.5-15.9 2.8-7.9 2.8-14.6 1.9-15.9-0.8-1.3-3-2.3-6.3-3.9z"/></svg>
-    </a>
+    <footer class="bg-dark-blue text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>© 2023 Mat Premium Anti-Slip Mobil. Hak Cipta Dilindungi.</p>
+            <p class="mt-2">Disclaimer: Harga promoo hanya berlaku untuk pembelian melalui website resmi.</p>
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Loading Overlay
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            if (loadingOverlay) {
-                window.addEventListener('load', () => {
-                    setTimeout(() => { // Ensure all assets are fully rendered
-                        loadingOverlay.classList.add('hidden');
-                    }, 500);
-                });
-            }
-
-            // Scroll Progress Bar
-            const scrollProgressBar = document.getElementById('scrollProgressBar');
-            if (scrollProgressBar) {
-                window.addEventListener('scroll', () => {
-                    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                    const scrolled = (scrollTop / scrollHeight) * 100;
-                    scrollProgressBar.style.width = scrolled + '%';
-                });
-            }
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endTime = new Date(now.getTime() + 15 * 60000); // 15 minutes from now
             
-            // Marquee Content Duplication for Seamless Loop
-            const marqueeContent = document.getElementById('marqueeContent');
-            if (marqueeContent) {
-                const originalText = `
-                    <span>⭐ "Kualitas Premium Mantap!" - Budi J.</span>
-                    <span>👍 "Dashboard jadi mewah & rapi!" - Siti A.</span>
-                    <span>🚗 "Sangat Praktis & Berguna!" - Eko P.</span>
-                    <span>💯 "Recommended banget pokoknya!" - Rina M.</span>
-                    <span>✨ "Anti-slipnya juara!" - Agus S.</span>
-                `;
-                marqueeContent.innerHTML = originalText + originalText; // Duplicate for seamless effect
-            }
-
-            // Countdown Timer
-            const countdownTimer = document.getElementById('countdownTimer');
-            if (countdownTimer) {
-                let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
-
-                const updateCountdown = setInterval(function() {
-                    let now = new Date().getTime();
-                    let distance = countDownDate - now;
-
-                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-                    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-                    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-
-                    if (distance < 0) {
-                        clearInterval(updateCountdown);
-                        countdownTimer.innerHTML = "<div style='font-weight:bold; font-size:1.2rem;'>PROMO BERAKHIR!</div>";
-                    }
-                }, 1000);
-            }
-
-            // Dynamic Stock Count
-            const stockCountElement = document.getElementById('stockCount');
-            if (stockCountElement) {
-                let currentStock = 23; // Initial stock
-                setInterval(() => {
-                    if (currentStock > 5 && Math.random() < 0.2) { // Randomly decrease
-                        currentStock -= Math.floor(Math.random() * 2) + 1;
-                        stockCountElement.textContent = currentStock;
-                    }
-                }, Math.random() * 20000 + 15000); // 15-35 seconds
-            }
-
-            // Animate on Scroll
-            const animatedElements = document.querySelectorAll('.animate-on-scroll');
-            if (animatedElements.length > 0) {
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target); // Optional: stop observing once visible
-                        }
-                    });
-                }, { threshold: 0.1 }); // Trigger when 10% visible
-
-                animatedElements.forEach(el => observer.observe(el));
-            }
-            
-            // Image Modal Logic
-            const modal = document.getElementById("imageModal");
-            const modalImg = document.getElementById("modalImage");
-            const galleryImages = document.querySelectorAll(".gallery-image-wrapper");
-            const closeModal = document.getElementById("closeModal");
-
-            galleryImages.forEach(imgWrapper => {
-                imgWrapper.onclick = function(){
-                    modal.style.display = "flex";
-                    modalImg.src = this.dataset.src;
+            const timer = setInterval(() => {
+                const now = new Date();
+                const diff = endTime - now;
+                
+                if (diff <= 0) {
+                    clearInterval(timer);
+                    document.getElementById('hours').textContent = '00';
+                    document.getElementById('minutes').textContent = '00';
+                    document.getElementById('seconds').textContent = '00';
+                    return;
                 }
+                
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                // Update sticky banner timer
+                document.getElementById('countdown-timer').textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const button = item.querySelector('button');
+            button.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+                const icon = button.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
             });
-
-            if(closeModal) {
-                closeModal.onclick = function() {
-                    modal.style.display = "none";
-                }
-            }
-            if(modal){
-                 modal.onclick = function(event) { // Close if clicked outside image
-                    if (event.target === modal) {
-                        modal.style.display = "none";
-                    }
-                }
-            }
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCountdown();
         });
     </script>
 </body>
