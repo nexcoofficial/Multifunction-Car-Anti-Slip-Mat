@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Multifunction Car Anti-Slip Mat Premium - Solusi Elegan untuk Dashboard Mobil Anda">
-    <title>Anti-Slip Mat Premium | Solusi Dashboard Mobil Mewah</title>
+    <meta name="description" content="Multifunction Car Anti-Slip Mat Premium - Solusi Elegan untuk Dashboard Mobil Anda. Anti slip, multifungsi, desain mewah.">
+    <title>Premium Car Anti-Slip Mat | Dashboard Mewah & Rapi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-gold: #d4af37;
-            --dark-gold: #b8941f;
-            --luxury-black: #1a1a1a;
-            --soft-gray: #f8f9fa;
-            --text-dark: #2c2c2c;
-            --text-light: #666;
-            --red-urgent: #e74c3c;
-            --green-success: #27ae60;
-            --shadow-luxury: 0 8px 32px rgba(212, 175, 55, 0.15);
+            --primary-gold: #d4af37; /* Luxury Gold */
+            --dark-gold: #b8941f; /* Darker Gold for accents */
+            --luxury-black: #1a1a1a; /* Deep Black for sophistication */
+            --soft-gray: #f0f0f0; /* Light Gray for backgrounds */
+            --text-dark: #2c2c2c; /* Dark Gray for text */
+            --text-light: #555; /* Lighter Gray for secondary text */
+            --red-urgent: #e74c3c; /* Urgent Red for promotions */
+            --white-pure: #ffffff;
+            --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 8px 25px rgba(0, 0, 0, 0.12);
+            --shadow-gold: 0 6px 20px rgba(212, 175, 55, 0.25);
         }
 
         * {
@@ -30,952 +32,855 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-dark);
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background-color: var(--soft-gray);
             overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .container {
-            max-width: 480px;
+        .container-wrapper { /* Added wrapper for potential full-width elements */
+            max-width: 500px; /* Optimal for mobile-first product pages */
             margin: 0 auto;
-            background: white;
+            background-color: var(--white-pure);
             min-height: 100vh;
             position: relative;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            box-shadow: 0 0 40px rgba(0,0,0,0.1);
         }
 
-        /* Hero Section */
-        .hero {
-            position: relative;
-            background: linear-gradient(135deg, var(--luxury-black) 0%, #2c2c2c 100%);
-            padding: 20px;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23d4af37" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23d4af37" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="%23d4af37" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 15px;
-            margin: 20px auto;
-            box-shadow: var(--shadow-luxury);
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 20px 0 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero .subtitle {
-            color: var(--primary-gold);
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 25px;
-            opacity: 0.9;
-        }
-
-        /* Marquee Testimonials */
-        .marquee-container {
-            background: var(--primary-gold);
-            padding: 12px 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .marquee {
-            white-space: nowrap;
-            animation: scroll 20s linear infinite;
-            color: white;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        @keyframes scroll {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        /* Price Banner */
-        .price-highlight {
-            background: linear-gradient(135deg, var(--red-urgent), #c0392b);
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .price-highlight::before {
-            content: '🔥';
-            position: absolute;
-            left: 20px;
-            font-size: 1.5rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-
-        .sale-price {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin: 0 10px;
-        }
-
-        .discount-badge {
-            background: var(--primary-gold);
-            color: var(--luxury-black);
-            padding: 2px 8px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        /* Benefits Section */
-        .benefits {
-            padding: 30px 20px;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--luxury-black);
-            margin-bottom: 25px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary-gold);
-            border-radius: 2px;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--soft-gray);
-            border-radius: 12px;
-            border-left: 4px solid var(--primary-gold);
-            animation: slideInLeft 0.6s ease-out;
-            animation-fill-mode: both;
-        }
-
-        .benefit-item:nth-child(2) { animation-delay: 0.1s; }
-        .benefit-item:nth-child(3) { animation-delay: 0.2s; }
-        .benefit-item:nth-child(4) { animation-delay: 0.3s; }
-        .benefit-item:nth-child(5) { animation-delay: 0.4s; }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .benefit-icon {
-            font-size: 1.5rem;
-            margin-right: 15px;
-            margin-top: 2px;
-        }
-
-        .benefit-text h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-            color: var(--luxury-black);
-        }
-
-        .benefit-text p {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            line-height: 1.5;
-        }
-
-        /* Product Gallery */
-        .gallery {
-            padding: 20px;
-            background: white;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .gallery-item {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 120px;
-            object-fit: cover;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 30px 20px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
-            border-top: 3px solid var(--primary-gold);
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 3rem;
-            color: var(--primary-gold);
-            font-weight: 800;
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--primary-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            margin-right: 12px;
-        }
-
-        .testimonial-info h5 {
-            font-weight: 600;
-            color: var(--luxury-black);
-            font-size: 0.9rem;
-        }
-
-        .testimonial-info .location {
-            font-size: 0.75rem;
-            color: var(--text-light);
-        }
-
-        .stars {
-            color: #ffd700;
-            font-size: 0.9rem;
-            margin-left: auto;
-        }
-
-        .testimonial-text {
-            font-size: 0.85rem;
-            line-height: 1.6;
-            color: var(--text-dark);
-            font-style: italic;
-        }
-
-        /* Urgency Section */
-        .urgency {
-            background: linear-gradient(135deg, var(--red-urgent), #c0392b);
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .urgency::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(255,255,255,0.1) 10px,
-                rgba(255,255,255,0.1) 20px
-            );
-            animation: slidePattern 20s linear infinite;
-        }
-
-        @keyframes slidePattern {
-            0% { transform: translate(-50%, -50%) rotate(0deg); }
-            100% { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-
-        .urgency-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .urgency h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .countdown-item {
-            background: rgba(255,255,255,0.2);
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-            min-width: 60px;
-        }
-
-        .countdown-number {
-            font-size: 1.5rem;
-            font-weight: 800;
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 0.7rem;
-            opacity: 0.9;
-        }
-
-        /* CTA Buttons */
-        .cta-section {
-            padding: 30px 20px;
-            background: white;
-            text-align: center;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
-            color: white;
-            padding: 18px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-luxury);
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.4);
-        }
-
-        /* Sticky Bottom Banner */
-        .sticky-banner {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 480px;
-            background: linear-gradient(135deg, var(--luxury-black), #2c2c2c);
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-            z-index: 1000;
-            border-top: 2px solid var(--primary-gold);
-        }
-
-        .sticky-price {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .sticky-price .original {
-            font-size: 0.7rem;
-            text-decoration: line-through;
-            opacity: 0.7;
-        }
-
-        .sticky-price .current {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--primary-gold);
-        }
-
-        .sticky-cta {
-            background: var(--primary-gold);
-            color: var(--luxury-black);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .sticky-cta:hover {
-            transform: scale(1.05);
-            background: var(--dark-gold);
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 320px) {
-            .hero h1 {
-                font-size: 1.5rem;
-            }
-            
-            .sale-price {
-                font-size: 1.5rem;
-            }
-            
-            .countdown {
-                gap: 10px;
-            }
-            
-            .countdown-item {
-                min-width: 50px;
-                padding: 8px;
-            }
-        }
-
-        /* Loading Animation */
-        .loading {
+        /* --- Loading Spinner --- */
+        .loading-overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--luxury-black);
+            background-color: var(--luxury-black);
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.5s ease-out;
         }
-
-        .loading.hidden {
+        .loading-overlay.hidden {
             opacity: 0;
             pointer-events: none;
         }
-
         .spinner {
             width: 50px;
             height: 50px;
-            border: 3px solid rgba(212, 175, 55, 0.3);
-            border-top: 3px solid var(--primary-gold);
+            border: 4px solid rgba(212, 175, 55, 0.3);
+            border-top-color: var(--primary-gold);
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
-
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            to { transform: rotate(360deg); }
         }
 
-        /* Scroll Progress */
-        .scroll-progress {
+        /* --- Scroll Progress Bar --- */
+        .scroll-progress-bar {
             position: fixed;
             top: 0;
             left: 0;
+            height: 4px;
+            background-color: var(--primary-gold);
             width: 0%;
-            height: 3px;
-            background: var(--primary-gold);
-            z-index: 1001;
-            transition: width 0.1s ease;
+            z-index: 9999;
+            transition: width 0.1s ease-out;
+        }
+        
+        /* --- Hero Section --- */
+        .hero-section {
+            background: linear-gradient(145deg, var(--luxury-black) 0%, #2a2a2a 100%);
+            color: var(--white-pure);
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before { /* Subtle pattern for texture */
+            content: "";
+            position: absolute;
+            top:0; left:0; right:0; bottom:0;
+            background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M20 20 L80 80 M20 80 L80 20" stroke-width="1" stroke="%23d4af37" opacity="0.05"/%3E%3C/svg%3E');
+            z-index: 0;
+        }
+        .hero-content {
+            position: relative; z-index: 1;
+        }
+        .hero-image {
+            width: 100%;
+            max-width: 320px; /* Increased for GIF visibility */
+            height: auto;
+            border-radius: 12px;
+            margin: 15px auto 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid var(--primary-gold);
+            animation: floatAnimation 3.5s ease-in-out infinite;
+        }
+        @keyframes floatAnimation {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        .hero-title {
+            font-size: 2rem; /* Increased for impact */
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            color: var(--primary-gold);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
         }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 80px;
-            right: 20px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
+        /* --- Marquee Testimonials --- */
+        .marquee-banner {
+            background-color: var(--primary-gold);
+            color: var(--luxury-black);
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marqueeAnimation 25s linear infinite;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .marquee-content span { margin: 0 25px; }
+        @keyframes marqueeAnimation {
+            0% { transform: translateX(0%); } /* Start from edge for continuous loop */
+            100% { transform: translateX(-50%); } /* Scroll one full set of items */
+        }
+
+        /* --- Price & Offer Section --- */
+        .price-offer-section {
+            padding: 25px 20px;
             text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 999;
-            animation: bounce 2s infinite;
+            background-color: var(--white-pure);
+        }
+        .price-original {
+            font-size: 1rem;
+            color: var(--text-light);
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        .price-sale {
+            font-size: 2.2rem;
+            color: var(--red-urgent);
+            font-weight: 800;
+        }
+        .price-discount-badge {
+            display: inline-block;
+            background-color: var(--red-urgent);
+            color: var(--white-pure);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .offer-details {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-top: 10px;
+        }
+
+        /* --- Section Styling --- */
+        .content-section {
+            padding: 30px 20px;
+            background-color: var(--white-pure);
+            border-bottom: 1px solid #e9e9e9;
+        }
+        .content-section:last-of-type { border-bottom: none; }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--luxury-black);
+            text-align: center;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .section-title::after { /* Gold underline accent */
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary-gold);
+            margin: 8px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- Benefits Section --- */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for mobile */
+            gap: 20px;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px;
+            background-color: var(--soft-gray);
+            border-radius: 10px;
+            border-left: 5px solid var(--primary-gold);
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-strong);
+        }
+        .benefit-icon {
+            font-size: 1.8rem; /* Larger icons */
+            color: var(--primary-gold);
+            margin-right: 15px;
+            margin-top: 3px;
+            min-width: 30px; /* Ensure alignment */
+            text-align: center;
+        }
+        .benefit-text h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .benefit-text p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- Product Gallery --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .gallery-image-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer; /* Indicates interactivity */
+        }
+        .gallery-image-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-strong);
+        }
+        .gallery-image-wrapper img {
+            width: 100%;
+            height: 150px; /* Uniform height */
+            object-fit: cover; /* Crop to fit */
+            display: block;
+        }
+
+        /* --- Testimonials Section --- */
+        .testimonial-card {
+            background-color: #fdfdfd; /* Slightly off-white */
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-subtle);
+            border-top: 4px solid var(--primary-gold);
+            position: relative;
+        }
+        .testimonial-card::before { /* Quote icon */
+            content: '“';
+            font-family: Georgia, serif;
+            font-size: 4rem;
+            color: var(--primary-gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            line-height: 1;
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            position: relative; z-index: 1;
+        }
+        .testimonial-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--primary-gold);
+            color: var(--luxury-black);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-right: 12px;
+        }
+        .testimonial-name {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .testimonial-location {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        .testimonial-rating {
+            margin-left: auto;
+            color: #ffc107; /* Standard star yellow */
+            font-size: 0.9rem;
+        }
+        .testimonial-text {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-style: italic;
+            position: relative; z-index: 1;
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+        /* --- Urgency & Countdown Section --- */
+        .urgency-section {
+            background: linear-gradient(135deg, var(--red-urgent), #c0392b);
+            color: var(--white-pure);
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+        .urgency-section::before { /* Animated diagonal lines */
+            content: "";
+            position: absolute;
+            width: 200%; height: 200%;
+            top: -50%; left: -50%;
+            background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px);
+            animation: animatedBackground 20s linear infinite;
+            z-index: 0;
+        }
+        @keyframes animatedBackground {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .urgency-content {
+            position: relative; z-index: 1;
+        }
+        .urgency-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Reduced gap */
+            margin: 20px 0;
+        }
+        .countdown-item {
+            background-color: rgba(255,255,255,0.15);
+            padding: 10px 12px; /* Adjusted padding */
+            border-radius: 8px;
+            min-width: 65px; /* Slightly wider */
+        }
+        .countdown-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: block;
+        }
+        .countdown-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        .stock-info {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .stock-info strong {
+            animation: pulseStock 1.5s infinite ease-in-out;
+        }
+        @keyframes pulseStock {
+            0%, 100% { transform: scale(1); color: var(--white-pure); }
+            50% { transform: scale(1.1); color: #fff3cd; } /* Light yellow pulse */
+        }
+
+        /* --- CTA Section --- */
+        .cta-main-button {
+            display: block;
+            width: calc(100% - 40px); /* Full width with padding */
+            margin: 30px auto;
+            padding: 18px 20px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: var(--luxury-black);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px; /* Pill shape */
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-gold);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            animation: pulseButton 2s infinite;
+        }
+        .cta-main-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            animation-play-state: paused;
+        }
+        @keyframes pulseButton {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+        .trust-badges {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: -10px;
+            margin-bottom: 20px;
+        }
+        .trust-badges span { margin: 0 8px; }
+
+        /* --- Footer / Extra Space --- */
+        .footer-space { height: 100px; } /* Space for sticky banner */
+
+        /* --- Sticky Bottom Banner --- */
+        .sticky-bottom-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 500px; /* Match container wrapper */
+            margin: 0 auto;
+            background-color: var(--luxury-black);
+            color: var(--white-pure);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            border-top: 3px solid var(--primary-gold);
+        }
+        .sticky-price-info .original-price {
+            font-size: 0.8rem;
+            text-decoration: line-through;
+            opacity: 0.7;
+            display: block;
+        }
+        .sticky-price-info .sale-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+        }
+        .sticky-cta-button {
+            padding: 10px 20px;
+            background-color: var(--primary-gold);
+            color: var(--luxury-black);
+            font-size: 0.95rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .sticky-cta-button:hover {
+            background-color: var(--dark-gold);
+            transform: scale(1.05);
+        }
+
+        /* --- Animations for elements on scroll --- */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- WhatsApp Floating Button --- */
+        .whatsapp-fab {
+            position: fixed;
+            width: 55px;
+            height: 55px;
+            bottom: 90px; /* Above sticky banner */
+            right: 20px;
+            background-color: #25D366;
+            color: var(--white-pure);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 28px; /* Icon size */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            animation: fabBounce 2.5s infinite ease-in-out;
+        }
+        @keyframes fabBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.05); }
+        }
+
+        /* Modal for Image Gallery */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content-image {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close-modal:hover, .close-modal:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        @media (max-width: 360px) { /* Extra small devices */
+            .hero-title { font-size: 1.7rem; }
+            .hero-subtitle { font-size: 0.95rem; }
+            .price-sale { font-size: 1.9rem; }
+            .countdown-item { min-width: 55px; padding: 8px 10px; }
+            .countdown-number { font-size: 1.5rem; }
+            .sticky-price-info .sale-price { font-size: 1rem; }
+            .sticky-cta-button { padding: 8px 15px; font-size: 0.85rem; }
+        }
+
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading" id="loading">
+    <div class="loading-overlay" id="loadingOverlay">
         <div class="spinner"></div>
     </div>
 
-    <!-- Scroll Progress -->
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
-    <div class="container">
+    <div class="container-wrapper">
         <!-- Hero Section -->
-        <section class="hero fade-in">
+        <section class="hero-section">
             <div class="hero-content">
-                <img src="https://cdn.cloudfastcdn.com/image/0d960cd0ab1dd6ae5f4e52609a014fb0fa88ff5a.gif" alt="Multifunction Car Anti-Slip Mat Premium" class="hero-image">
-                <h1>🚗 MULTIFUNCTION CAR ANTI-SLIP MAT</h1>
-                <p class="subtitle">Solusi Premium Dashboard Mobil Mewah Anda</p>
+                <img src="https://cdn.cloudfastcdn.com/image/0d960cd0ab1dd6ae5f4e52609a014fb0fa88ff5a.gif" alt="Multifunction Car Anti-Slip Mat Premium Animation" class="hero-image animate-on-scroll">
+                <h1 class="hero-title animate-on-scroll">Solusi Dashboard Mobil MEWAH & RAPI</h1>
+                <p class="hero-subtitle animate-on-scroll">Multifunction Car Anti-Slip Mat Premium - Berkendara Tanpa Cemas Barang Berantakan!</p>
             </div>
         </section>
 
         <!-- Marquee Testimonials -->
-        <div class="marquee-container">
-            <div class="marquee">
-                ⭐ "Kualitas Premium!" - Andi Jakarta • ⭐ "Dashboard jadi mewah!" - Sari Surabaya • ⭐ "Sangat Praktis!" - Budi Bandung • ⭐ "Recommended banget!" - Maya Medan • 
+        <div class="marquee-banner">
+            <div class="marquee-content" id="marqueeContent">
+                <!-- Content injected by JS for seamless loop -->
             </div>
         </div>
 
-        <!-- Price Highlight -->
-        <section class="price-highlight">
-            <div style="position: relative; z-index: 2;">
-                <div>
-                    <span class="original-price">Rp 249.000</span>
-                    <span class="sale-price">Rp 166.000</span>
-                    <span class="discount-badge">HEMAT 33%</span>
-                </div>
-                <div style="font-size: 0.85rem; margin-top: 5px;">
-                    ⚡ Promo Terbatas Hari Ini!
-                </div>
+        <!-- Price & Offer Section -->
+        <section class="price-offer-section animate-on-scroll">
+            <div>
+                <span class="price-original">Rp 249.000</span>
+                <strong class="price-sale">Rp 166.000</strong>
+                <span class="price-discount-badge">HEMAT 33%!</span>
             </div>
+            <p class="offer-details">Penawaran Spesial Terbatas! Jangan Sampai Ketinggalan!</p>
         </section>
 
         <!-- Benefits Section -->
-        <section class="benefits fade-in">
-            <h2 class="section-title">✨ Kenapa Harus Pilih Produk Kami?</h2>
-            
-            <div class="benefit-item">
-                <div class="benefit-icon">🔒</div>
-                <div class="benefit-text">
-                    <h4>Anti-Slip Technology</h4>
-                    <p>Material premium dengan teknologi anti-slip yang mencegah barang terpeleset saat berkendara</p>
+        <section class="content-section">
+            <h2 class="section-title animate-on-scroll">✨ Keunggulan Produk Kami ✨</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-text">
+                        <h4>Anti-Slip Super Kuat</h4>
+                        <p>Dashboard aman! HP, koin, dan barang lain tidak akan jatuh atau bergeser meski di jalan bergelombang.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">📱</div>
-                <div class="benefit-text">
-                    <h4>Multifungsi 3-in-1</h4>
-                    <p>Berfungsi sebagai holder HP, tempat koin, dan organizer barang kecil dalam satu produk</p>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">📱</div>
+                    <div class="benefit-text">
+                        <h4>Multifungsi 3-in-1</h4>
+                        <p>Holder HP praktis, tempat penyimpanan koin, dan alas serbaguna untuk dashboard mobil Anda.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">💎</div>
-                <div class="benefit-text">
-                    <h4>Desain Premium Luxury</h4>
-                    <p>Memberikan kesan mewah dan elegan pada interior dashboard mobil Anda</p>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">💎</div>
+                    <div class="benefit-text">
+                        <h4>Desain Mewah & Elegan</h4>
+                        <p>Tingkatkan tampilan interior mobil Anda dengan sentuhan premium yang menawan.</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">🧽</div>
-                <div class="benefit-text">
-                    <h4>Mudah Dibersihkan</h4>
-                    <p>Material berkualitas tinggi yang tahan lama dan mudah perawatannya</p>
+                <div class="benefit-item animate-on-scroll">
+                    <div class="benefit-icon">🧼</div>
+                    <div class="benefit-text">
+                        <h4>Tahan Lama & Mudah Dibersihkan</h4>
+                        <p>Terbuat dari material berkualitas tinggi, awet, dan sangat mudah untuk dibersihkan kembali.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Product Gallery -->
-        <section class="gallery fade-in">
-            <h2 class="section-title">📸 Lihat Detail Produknya</h2>
+        <!-- Product Gallery Section -->
+        <section class="content-section">
+            <h2 class="section-title animate-on-scroll">📸 Galeri Produk Eksklusif</h2>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png" alt="Detail 1">
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png"><img src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png" alt="Car Mat Detail 1"></div>
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png"><img src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png" alt="Car Mat Detail 2"></div>
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png"><img src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png" alt="Car Mat Detail 3"></div>
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png"><img src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png" alt="Car Mat Detail 4"></div>
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/57f1a54c28d912cd1f8084a2ebd4d1602cb2bd68-600.png"><img src="https://cdn.cloudfastcdn.com/image/57f1a54c28d912cd1f8084a2ebd4d1602cb2bd68-600.png" alt="Car Mat Detail 5"></div>
+                <div class="gallery-image-wrapper animate-on-scroll" data-src="https://cdn.cloudfastcdn.com/image/f180383b8db5f6c5f1a9688346f29937b49a418d-600.png"><img src="https://cdn.cloudfastcdn.com/image/f180383b8db5f6c5f1a9688346f29937b49a418d-600.png" alt="Car Mat Detail 6"></div>
+            </div>
+        </section>
+        
+        <!-- Modal for Image Viewing -->
+        <div id="imageModal" class="image-modal">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img class="modal-content-image" id="modalImage">
+        </div>
+
+        <!-- Testimonials Section -->
+        <section class="content-section">
+            <h2 class="section-title animate-on-scroll">💬 Apa Kata Pelanggan Kami?</h2>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">AS</div>
+                    <div>
+                        <div class="testimonial-name">Ahmad S.</div>
+                        <div class="testimonial-location">Jakarta Pusat</div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.cloudfastcdn.com/image/cedc4a5803e281e2adf3ac388c41d35b20b06284-600.png" alt="Detail 2">
+                <p class="testimonial-text">"Mantap jiwa! Dashboard jadi kinclong dan barang-barang gak geser lagi. HP aman pas lagi ngecas sambil nyetir. Recommended!"</p>
+            </div>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">DW</div>
+                    <div>
+                        <div class="testimonial-name">Dewi W.</div>
+                        <div class="testimonial-location">Surabaya</div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png" alt="Detail 3">
+                <p class="testimonial-text">"Suka banget sama desainnya, keliatan mewah. Kualitasnya juga oke punya, gak nyesel beli. Multifungsi banget buat emak-emak kayak saya."</p>
+            </div>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">BP</div>
+                    <div>
+                        <div class="testimonial-name">Budi P.</div>
+                        <div class="testimonial-location">Bandung</div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://cdn.cloudfastcdn.com/image/a8b39b4359031bdec1fb27938c4d4ab4c1a41afb-600.png" alt="Detail 4">
+                <p class="testimonial-text">"Awalnya ragu, tapi pas dateng barangnya oke banget. Anti slipnya beneran fungsi, koin dan kunci gak berisik lagi. Harganya juga pas di kantong."</p>
+            </div>
+             <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">RS</div>
+                    <div>
+                        <div class="testimonial-name">Rina S.</div>
+                        <div class="testimonial-location">Medan</div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
                 </div>
+                <p class="testimonial-text">"Praktis dan elegan! Cocok buat mobil saya yang sering bawa banyak barang kecil. Pengiriman cepat, seller ramah. Thank you!"</p>
+            </div>
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">EK</div>
+                    <div>
+                        <div class="testimonial-name">Eko K.</div>
+                        <div class="testimonial-location">Semarang</div>
+                    </div>
+                    <div class="testimonial-rating">⭐⭐⭐⭐</div>
+                </div>
+                <p class="testimonial-text">"Kualitas bagus, sesuai deskripsi. Agak sedikit bau karet pas baru dibuka, tapi hilang setelah diangin-anginkan. Overall puas."</p>
             </div>
         </section>
 
-        <!-- Testimonials -->
-        <section class="testimonials fade-in">
-            <h2 class="section-title">💬 Kata Mereka yang Sudah Beli</h2>
-
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">R</div>
-                    <div class="testimonial-info">
-                        <h5>Rina Susanti</h5>
-                        <div class="location">Jakarta Selatan</div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
+        <!-- Urgency & Countdown Section -->
+        <section class="urgency-section">
+            <div class="urgency-content animate-on-scroll">
+                <h3 class="urgency-title">🔥 PENAWARAN SPESIAL HARI INI! 🔥</h3>
+                <p>Diskon Berakhir Dalam:</p>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="countdown-item"><span class="countdown-number" id="hours">00</span><span class="countdown-label">Jam</span></div>
+                    <div class="countdown-item"><span class="countdown-number" id="minutes">00</span><span class="countdown-label">Menit</span></div>
+                    <div class="countdown-item"><span class="countdown-number" id="seconds">00</span><span class="countdown-label">Detik</span></div>
                 </div>
-                <p class="testimonial-text">Wah keren banget! Dashboard mobil saya jadi terlihat lebih mewah dan rapi. HP gak jatuh lagi waktu ngerem mendadak.</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">A</div>
-                    <div class="testimonial-info">
-                        <h5>Andi Pratama</h5>
-                        <div class="location">Bandung</div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">Produknya berkualitas tinggi, sesuai ekspektasi. Bahan anti-slipnya beneran ampuh, barang-barang kecil jadi gak berceceran lagi.</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">S</div>
-                    <div class="testimonial-info">
-                        <h5>Sari Dewi</h5>
-                        <div class="location">Surabaya</div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">Harganya terjangkau untuk kualitas premium seperti ini. Fungsi 3-in-1 nya sangat membantu, dari holder HP sampai tempat koin.</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">B</div>
-                    <div class="testimonial-info">
-                        <h5>Budi Santoso</h5>
-                        <div class="location">Medan</div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">Sudah order yang kedua kalinya buat hadiah. Kualitas konsisten bagus, packaging rapi, pengiriman cepat.</p>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-header">
-                    <div class="testimonial-avatar">M</div>
-                    <div class="testimonial-info">
-                        <h5>Maya Sinta</h5>
-                        <div class="location">Yogyakarta</div>
-                    </div>
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                </div>
-                <p class="testimonial-text">Recommended banget! Interior mobil jadi lebih tertata dan elegan. Bahannya awet, sudah 6 bulan pakai masih bagus.</p>
+                <p class="stock-info">Hanya Tersisa <strong id="stockCount">23</strong> Unit Lagi!</p>
             </div>
         </section>
 
-        <!-- Urgency Section -->
-        <section class="urgency fade-in">
-            <div class="urgency-content">
-                <h3>⚡ PROMO BERAKHIR DALAM:</h3>
-                <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">23</span>
-                        <span class="countdown-label">JAM</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">59</span>
-                        <span class="countdown-label">MENIT</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">59</span>
-                        <span class="countdown-label">DETIK</span>
-                    </div>
-                </div>
-                <p style="font-size: 0.9rem; opacity: 0.9;">🔥 Hanya tersisa <strong id="stock">27</strong> unit lagi!</p>
-            </div>
-        </section>
+        <!-- Main CTA Button -->
+        <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" class="cta-main-button animate-on-scroll" target="_self">
+            🛒 PESAN SEKARANG & AMANKAN DISKON!
+        </a>
+        <div class="trust-badges animate-on-scroll">
+            <span>✅ 100% Original</span>
+            <span>🚚 Gratis Ongkir*</span>
+            <span>🛡️ Transaksi Aman</span>
+        </div>
 
-        <!-- CTA Section -->
-        <section class="cta-section fade-in">
-            <h2 style="margin-bottom: 20px; color: var(--luxury-black);">🛒 Jangan Sampai Kehabisan!</h2>
-            <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" style="text-decoration: none;">
-                <button class="cta-button">
-                    PESAN SEKARANG - Rp 166.000
-                </button>
-            </a>
-            <p style="font-size: 0.8rem; color: var(--text-light); margin-top: 15px;">
-                ✅ Gratis Ongkir Seluruh Indonesia<br>
-                ✅ Garansi 100% Uang Kembali<br>
-                ✅ Customer Service 24/7
-            </p>
-        </section>
-
-        <!-- Extra spacing for sticky banner -->
-        <div style="height: 80px;"></div>
+        <div class="footer-space"></div> <!-- For sticky banner -->
     </div>
 
     <!-- Sticky Bottom Banner -->
-    <div class="sticky-banner">
-        <div class="sticky-price">
-            <div class="original">Rp 249.000</div>
-            <div class="current">Rp 166.000</div>
+    <div class="sticky-bottom-banner">
+        <div class="sticky-price-info">
+            <span class="original-price">Rp 249.000</span>
+            <span class="sale-price">Rp 166.000</span>
         </div>
-        <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" style="text-decoration: none;">
-            <button class="sticky-cta">BELI SEKARANG</button>
-        </a>
+        <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat" class="sticky-cta-button" target="_self">BELI SEKARANG</a>
     </div>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Multifunction%20Car%20Anti-Slip%20Mat" class="whatsapp-float" target="_blank">
-        📱
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20Multifunction%20Car%20Anti-Slip%20Mat%20Premium." class="whatsapp-fab" target="_blank" aria-label="Chat di WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" width="24" height="24"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 .3c30.9 0 61.4 11.9 84.1 33.6 22.7 21.7 35.6 50.3 35.6 81.3 0 83.1-68.5 151.1-151.8 151.1-27.9 0-54.9-7.8-77.8-22.3L128 416l-9.2-56.5c-14.8-22.8-23.9-48.7-23.9-76.1 0-83.1 68.5-151.1 151.8-151.1zM223.9 177.2c-11.4 0-20.6 9.2-20.6 20.6 0 11.4 9.2 20.6 20.6 20.6 11.4 0 20.6-9.2 20.6-20.6 0-11.4-9.2-20.6-20.6-20.6zm69.7 79.2c-3.3-1.6-19.8-9.7-22.8-10.8-3.1-1.1-5.3-1.6-7.6 1.6-2.2 3.3-8.6 10.8-10.6 13s-3.9 2.3-7.2 0.8c-3.3-1.6-14.1-5.2-26.8-16.6-9.9-8.9-16.6-19.8-18.6-23.1-2-3.3 0.4-5.1 1.6-6.6 1.1-1.6 2.5-3.9 3.8-5.9 1.3-2 1.6-3.3 2.5-5.6.8-2.3 0.4-4.2-0.4-5.9-0.8-1.6-7.6-18.1-10.3-24.8-2.8-6.6-5.6-5.7-7.6-5.7s-4.2 0-6.3 0c-2.2 0-5.6 0.8-8.6 3.9s-11.4 11.1-11.4 27c0 15.9 11.6 31.3 13.3 33.6 1.6 2.3 22.8 34.9 55.4 48.6 32.4 13.7 32.4 9.2 38.1 8.4 5.7-0.8 19.8-8.1 22.5-15.9 2.8-7.9 2.8-14.6 1.9-15.9-0.8-1.3-3-2.3-6.3-3.9z"/></svg>
     </a>
 
     <script>
-        // Loading Screen
-        window.addEventListener('load', function() {
-            setTimeout(() => {
-                document.getElementById('loading').classList.add('hidden');
-            }, 1000);
-        });
-
-        // Scroll Progress
-        window.addEventListener('scroll', function() {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
-        });
-
-        // Countdown Timer
-        function startCountdown() {
-            const endTime = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
-            
-            const timer = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = endTime - now;
-                
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-                
-                if (distance < 0) {
-                    clearInterval(timer);
-                    document.getElementById('countdown').innerHTML = '<div style="color: #fff; font-weight: bold;">PROMO BERAKHIR!</div>';
-                }
-            }, 1000);
-        }
-
-        // Stock Counter
-        function updateStock() {
-            const stockElement = document.getElementById('stock');
-            let currentStock = parseInt(stockElement.textContent);
-            
-            // Randomly decrease stock every 30-60 seconds
-            setInterval(() => {
-                if (currentStock > 15 && Math.random() > 0.7) {
-                    currentStock -= Math.floor(Math.random() * 2) + 1;
-                    stockElement.textContent = currentStock;
-                    
-                    // Add flash effect
-                    stockElement.style.animation = 'none';
-                    setTimeout(() => {
-                        stockElement.style.animation = 'pulse 0.5s ease-in-out';
-                    }, 10);
-                }
-            }, Math.random() * 30000 + 30000);
-        }
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeIn 0.8s ease-out forwards';
-                }
-            });
-        }, observerOptions);
-
-        // Smooth scroll for anchor links
         document.addEventListener('DOMContentLoaded', function() {
-            startCountdown();
-            updateStock();
-            
-            // Observe all fade-in elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Add click tracking
-            document.querySelectorAll('a[href*="mila.orderonline.id"]').forEach(link => {
-                link.addEventListener('click', function() {
-                    // Analytics tracking can be added here
-                    console.log('Order button clicked');
+            // Loading Overlay
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => { // Ensure all assets are fully rendered
+                        loadingOverlay.classList.add('hidden');
+                    }, 500);
                 });
-            });
-        });
-
-        // Performance optimization
-        let ticking = false;
-        
-        function updateScrollProgress() {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', function() {
-            if (!ticking) {
-                requestAnimationFrame(updateScrollProgress);
-                ticking = true;
             }
-        });
 
-        // Add exit-intent popup (optional)
-        let exitIntentShown = false;
-        document.addEventListener('mouseleave', function(e) {
-            if (e.clientY <= 0 && !exitIntentShown) {
-                exitIntentShown = true;
-                // Could add exit-intent modal here
-                console.log('Exit intent detected');
+            // Scroll Progress Bar
+            const scrollProgressBar = document.getElementById('scrollProgressBar');
+            if (scrollProgressBar) {
+                window.addEventListener('scroll', () => {
+                    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                    const scrolled = (scrollTop / scrollHeight) * 100;
+                    scrollProgressBar.style.width = scrolled + '%';
+                });
             }
-        });
-
-        // Touch events for mobile
-        let touchStartY = 0;
-        document.addEventListener('touchstart', function(e) {
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-
-        document.addEventListener('touchmove', function(e) {
-            const touchY = e.touches[0].clientY;
-            const touchDiff = touchStartY - touchY;
             
-            // Add subtle parallax effect on scroll
-            if (Math.abs(touchDiff) > 5) {
-                const heroImage = document.querySelector('.hero-image');
-                if (heroImage) {
-                    const scrolled = window.scrollY;
-                    heroImage.style.transform = `translateY(${scrolled * 0.5}px)`;
+            // Marquee Content Duplication for Seamless Loop
+            const marqueeContent = document.getElementById('marqueeContent');
+            if (marqueeContent) {
+                const originalText = `
+                    <span>⭐ "Kualitas Premium Mantap!" - Budi J.</span>
+                    <span>👍 "Dashboard jadi mewah & rapi!" - Siti A.</span>
+                    <span>🚗 "Sangat Praktis & Berguna!" - Eko P.</span>
+                    <span>💯 "Recommended banget pokoknya!" - Rina M.</span>
+                    <span>✨ "Anti-slipnya juara!" - Agus S.</span>
+                `;
+                marqueeContent.innerHTML = originalText + originalText; // Duplicate for seamless effect
+            }
+
+            // Countdown Timer
+            const countdownTimer = document.getElementById('countdownTimer');
+            if (countdownTimer) {
+                let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000); // 24 hours from now
+
+                const updateCountdown = setInterval(function() {
+                    let now = new Date().getTime();
+                    let distance = countDownDate - now;
+
+                    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+                    document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+                    document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+
+                    if (distance < 0) {
+                        clearInterval(updateCountdown);
+                        countdownTimer.innerHTML = "<div style='font-weight:bold; font-size:1.2rem;'>PROMO BERAKHIR!</div>";
+                    }
+                }, 1000);
+            }
+
+            // Dynamic Stock Count
+            const stockCountElement = document.getElementById('stockCount');
+            if (stockCountElement) {
+                let currentStock = 23; // Initial stock
+                setInterval(() => {
+                    if (currentStock > 5 && Math.random() < 0.2) { // Randomly decrease
+                        currentStock -= Math.floor(Math.random() * 2) + 1;
+                        stockCountElement.textContent = currentStock;
+                    }
+                }, Math.random() * 20000 + 15000); // 15-35 seconds
+            }
+
+            // Animate on Scroll
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+            if (animatedElements.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Optional: stop observing once visible
+                        }
+                    });
+                }, { threshold: 0.1 }); // Trigger when 10% visible
+
+                animatedElements.forEach(el => observer.observe(el));
+            }
+            
+            // Image Modal Logic
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            const galleryImages = document.querySelectorAll(".gallery-image-wrapper");
+            const closeModal = document.getElementById("closeModal");
+
+            galleryImages.forEach(imgWrapper => {
+                imgWrapper.onclick = function(){
+                    modal.style.display = "flex";
+                    modalImg.src = this.dataset.src;
+                }
+            });
+
+            if(closeModal) {
+                closeModal.onclick = function() {
+                    modal.style.display = "none";
                 }
             }
-        }, { passive: true });
+            if(modal){
+                 modal.onclick = function(event) { // Close if clicked outside image
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>
