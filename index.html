@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multifunction Car Anti-Slip Mat - Premium Landing Page</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #fdfdfd;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      max-width: 600px;
+    }
+
+    /* Heading & hero section */
+    .hero {
+      position: relative;
+      margin-top: 15px;
+      text-align: center;
+      padding: 10px;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .hero h1 {
+      margin: 15px 0 10px;
+      color: #444;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .hero h2 {
+      margin: 5px 0;
+      color: #999;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    /* Marquee testimonials */
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      margin: 15px 0;
+    }
+    .marquee p {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+      font-weight: bold;
+      color: #444;
+    }
+    @keyframes marquee {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-100%, 0); }
+    }
+
+    /* Key Benefits Section */
+    .benefits {
+      margin: 20px 0;
+    }
+    .benefits h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #222;
+    }
+    .benefits ul {
+      list-style: disc;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .benefits ul li {
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      margin: 20px 0;
+    }
+    .testimonials h3 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #222;
+    }
+    .testimonial-item {
+      background-color: #f7f7f7;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .testimonial-item strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    .testimonial-item p {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    /* Urgency & Counter Section */
+    .urgency {
+      margin: 20px 0;
+      text-align: center;
+      background-color: #ffe9e9;
+      padding: 15px;
+      border-radius: 6px;
+      color: #851b1b;
+    }
+    .urgency p {
+      margin: 5px 0;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .countdown {
+      font-size: 1.4rem;
+      color: #851b1b;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    /* CTA Button */
+    .cta {
+      text-align: center;
+      margin: 20px auto;
+    }
+    .cta button {
+      background-color: #d4af37;
+      color: #fff;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .cta button:hover {
+      background-color: #c79c28;
+    }
+
+    /* Sticky bottom banner */
+    .sticky-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-top: 2px solid #eee;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+    .sticky-banner .price-details {
+      font-size: 0.95rem;
+      margin-left: 10px;
+      color: #333;
+    }
+    .sticky-banner .price-details .normal-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 0.85rem;
+    }
+    .sticky-banner .price-details .sale-price {
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin-left: 5px;
+    }
+    .sticky-banner .cta-sticky {
+      margin-right: 10px;
+    }
+    .sticky-banner .cta-sticky button {
+      background-color: #d4af37;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .sticky-banner .cta-sticky button:hover {
+      background-color: #c79c28;
+    }
+
+    /* Premium animations */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.3rem;
+      }
+      .hero h2 {
+        font-size: 0.9rem;
+      }
+      .benefits ul li {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container fade-in">
+  <!-- Hero section -->
+  <div class="hero">
+    <!-- Example hero images (carousel style or single) -->
+    <img src="https://cdn.cloudfastcdn.com/image/e4d249f1987dce72c589c9f63f6cbebf521c36b9-600.png" alt="Multifunction Car Anti-Slip Mat">
+    <h1>Multifunction Car Anti-Slip Mat</h1>
+    <h2>Solusi Elegan & Praktis untuk Mobil Anda</h2>
+  </div>
+
+  <!-- Marquee testimonials -->
+  <div class="marquee">
+    <p>Testimoni Terbaik! Harga Terjangkau! Kualitas Mewah! Banyak Pembeli Puas!</p>
+  </div>
+
+  <!-- Key benefits -->
+  <div class="benefits">
+    <h3>Manfaat Utama</h3>
+    <ul>
+      <li>Anti-Slip & Stabil: Mencegah barang jatuh saat mengemudi</li>
+      <li>Multifungsi: Holder ponsel, koin, kacamata, dan lain-lain</li>
+      <li>Desain Mewah: Memberi kesan premium di dashboard mobil</li>
+      <li>Mudah Dibersihkan & Tahan Lama</li>
+    </ul>
+  </div>
+
+  <!-- Additional product images -->
+  <div class="container" style="margin-top:10px;">
+    <img src="https://cdn.cloudfastcdn.com/image/9256ead96f464a51edcebfd4d3f9e169d5c415d8-600.png" alt="">
+    <br>
+    <img src="https://cdn.cloudfastcdn.com/image/f180383b8db5f6c5f1a9688346f29937b49a418d-600.png" alt="">
+    <br>
+    <img src="https://cdn.cloudfastcdn.com/image/5c1cee37e6822e192d6de80e113f4e4caacd5e87-600.png" alt="">
+  </div>
+
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <h3>Apa Kata Mereka?</h3>
+    <div class="testimonial-item">
+      <strong>Rina (Jakarta)</strong>
+      <p>Produk ini keren banget! Dashboard mobil jadi lebih rapi dan mewah.</p>
+    </div>
+    <div class="testimonial-item">
+      <strong>Andi (Bandung)</strong>
+      <p>Sangat membantu, ponsel dan kacamata saya tidak lagi terpental saat ngerem.</p>
+    </div>
+    <div class="testimonial-item">
+      <strong>Sari (Surabaya)</strong>
+      <p>Harganya oke, kualitas oke, fungsi 3 in 1. Mulai dari holder HP, koin, sampai barang kecil lain.</p>
+    </div>
+    <div class="testimonial-item">
+      <strong>Lukman (Semarang)</strong>
+      <p>Pembelian kedua saya, saya hadiahkan ke orang tua. Mereka juga suka!</p>
+    </div>
+    <div class="testimonial-item">
+      <strong>Fitri (Medan)</strong>
+      <p>Tampilan mobil jadi semakin elegan, recommended.</p>
+    </div>
+  </div>
+
+  <!-- Urgency messaging -->
+  <div class="urgency">
+    <p>Stok Terbatas! Pesan Sebelum Kehabisan!</p>
+    <p>Harga Spesial Berakhir Dalam:</p>
+    <div class="countdown" id="countdownTimer">00:00:00</div>
+  </div>
+
+  <!-- CTA Button -->
+  <div class="cta">
+    <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat">
+      <button>Pesan Sekarang &raquo;</button>
+    </a>
+  </div>
+
+</div>
+
+<!-- Sticky Price Banner -->
+<div class="sticky-banner" id="stickyBanner">
+  <div class="price-details">
+    <span class="normal-price">Rp 249.000</span>
+    <span class="sale-price">Rp 166.000</span>
+  </div>
+  <div class="cta-sticky">
+    <a href="https://mila.orderonline.id/multifunction-car-anti-slip-mat">
+      <button>Beli Sekarang</button>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Countdown timer (24 hours from load)
+  const countdownElement = document.getElementById('countdownTimer');
+  let deadline = new Date();
+  deadline.setHours(deadline.getHours() + 24); // set countdown for 24 hours from now
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const t = deadline - now;
+    if(t >= 0) {
+      const hours = Math.floor((t % (1000*60*60*24))/(1000*60*60));
+      const minutes = Math.floor((t % (1000*60*60))/(1000*60));
+      const seconds = Math.floor((t % (1000*60))/1000);
+      const hoursDisplay = hours < 10 ? "0"+hours : hours;
+      const minutesDisplay = minutes < 10 ? "0"+minutes : minutes;
+      const secondsDisplay = seconds < 10 ? "0"+seconds : seconds;
+      countdownElement.innerHTML = `${hoursDisplay}:${minutesDisplay}:${secondsDisplay}`;
+    } else {
+      countdownElement.innerHTML = "00:00:00";
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
